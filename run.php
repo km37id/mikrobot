@@ -102,13 +102,13 @@ if ($key == 1) {
 	fwrite($fopengen, $genlist."\n");
 	$i++;
 	}
-	echo "{$green2}[ {$putih}+ {$green2}] {$putih}C0d3 berhasil di Buat nama File {$lblue2}list.txt!!{$putih}\n";
+	echo "{$green2}[ {$putih}+ {$green2}] {$putih}C0d3 berhasil di Buat nama File {$lblue2}list.txt!!{$putih}\n" ;
 }else{
 echo "\n";
 $ip = readline(" [ ? ] IP Address: ");
 $file_domain = file_get_contents("list.txt");
 	echo "\n{$lblue2} [ # ]{$putih} IP Address: $ip";
-	echo "\n{$lblue2} [ # ]{$putih} Response {$lblue2} | {$putih} Voucher {$lblue2} [ # ]";
+	echo "\n{$lblue2} [ # ]{$putih} Response {$lblue2} | {$putih} Voucher {$lblue2} [ # ]\n";
 	for ($n=0; $n <= 9999999 ; $n++) { 
 
 		$exp_domain = explode("\n", $file_domain);
